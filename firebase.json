@@ -6,7 +6,7 @@
   },
   "hosting": {
     "site": "angular-recipe-app-nathalia",
-    "public": "dist/angular-recipe-app",
+    "public": "dist/angular-recipe-nathalia/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
