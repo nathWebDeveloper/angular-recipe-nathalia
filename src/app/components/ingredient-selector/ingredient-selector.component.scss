@@ -1,0 +1,134 @@
+.ingredient-selector {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: #718096;
+    font-size: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      border-color: #667eea;
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    &--selected {
+      background: #667eea;
+      border-color: #667eea;
+      color: white;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__emoji {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  &__calories {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  &__counter {
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #edf2f7;
+    border-radius: 0.75rem;
+  }
+
+  &__count {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  &__warning {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  &__search-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 0.5rem 1.5rem rgba(102, 126, 234, 0.3);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ingredient-selector {
+    padding: 1.5rem;
+
+    &__grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+
+    &__item {
+      padding: 1rem;
+    }
+
+    &__emoji {
+      font-size: 2rem;
+    }
+  }
+}
